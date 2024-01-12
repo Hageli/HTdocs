@@ -25,4 +25,7 @@ echo "_______________________________________________________________________"
 echo "TEST 5 TOO MANY ARGS (./reverse input.txt output.txt output2.txt)"
 ./reverse input.txt output.txt output2.txt
 echo "_______________________________________________________________________"
+echo "TEST 6 SAME INPUT AND OUTPUT FILES (./reverse input.txt input.txt)"
+./reverse input.txt input.txt
+echo "_______________________________________________________________________"
 echo "TESTING DONE"
