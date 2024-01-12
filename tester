@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo "(gcc -o reverse reverse.c)"
+gcc -o reverse reverse.c
+echo "SETUP COMPLETE"
+echo ""
+echo "input.txt FILE CONTENT:"
+cat input.txt
+echo "_______________________________________________________________________"
+echo "TEST 1 NO INPUT FILE, USER INPUT (./reverse)"
+./reverse 
+echo "_______________________________________________________________________"
+echo "TEST 2 WRONG INPUT FILE (./reverse noInputHere.txt)"
+./reverse noInputHere.txt
+echo "_______________________________________________________________________"
+echo "TEST 3 CORRECT INPUT FILE (./reverse input.txt)"
+./reverse input.txt 
+echo "_______________________________________________________________________"
+echo "TEST 4 CORRECT INPUT, CORRECT OUTPUT (./reverse input.txt output.txt)"
+./reverse input.txt output.txt
+echo "_______________________________________________________________________"
+echo "FILE CONTENT (cat output.txt)"
+cat output.txt
+echo "_______________________________________________________________________"
+echo "TEST 5 TOO MANY ARGS (./reverse input.txt output.txt output2.txt)"
+./reverse input.txt output.txt output2.txt
+echo "_______________________________________________________________________"
+echo "TESTING DONE"
