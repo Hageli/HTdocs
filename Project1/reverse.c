@@ -139,7 +139,6 @@ int main(int argc, char *argv[]) {
             addNode(nodeList, line);
         }
         printNodes(nodeList->head);
-
         freeLinkedList(nodeList);
         fclose(readfile);
         exit(0);
