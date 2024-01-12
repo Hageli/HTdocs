@@ -146,7 +146,7 @@ int main(int argc, char *argv[]) {
 
     // Case where input and output files are the same
     } else if(strcmp(argv[1], argv[2]) == 0) {
-        fprintf(stderr,"Input and output file must differ\n");
+        fprintf(stderr,"input and output file must differ\n");
         exit(1); 
     
     // Case where we have both input and output files that are different
