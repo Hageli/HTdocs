@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Used function $0"
+echo ""
+echo "Command line arguments:"
+for ARGUMENT in $*
+do
+    echo "$ARGUMENT"
+done
+echo ""
+echo "Environment variables:"
+printenv | head -10
