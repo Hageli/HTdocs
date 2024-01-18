@@ -29,3 +29,5 @@ echo "TEST 6 SAME INPUT AND OUTPUT FILES (./reverse input.txt input.txt)"
 ./reverse input.txt input.txt
 echo "_______________________________________________________________________"
 echo "TESTING DONE"
+
+valgrind --leak-check=full ./reverse input.txt
