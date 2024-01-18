@@ -1,8 +1,0 @@
-#!/bin/bash
-
-if [ $# -ne 1 ]; then
-	echo "Usage: search_page command"
-	exit 1
-else 
-	find ./usr/share/man -name "$1*"
-fi

@@ -1,1 +1,0 @@
-tr  -c '[:alnum:]' '[\n*]' < $1 | sort | uniq -c | sort -nr | sed '1d' | head
