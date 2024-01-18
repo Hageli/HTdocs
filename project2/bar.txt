@@ -1,5 +1,0 @@
-this line has foo in it
-so does this foolish line; do you see where?
-even this line, which has barfood in it, will be printed,
-this line will no be printed
-but this will, cmon foo
