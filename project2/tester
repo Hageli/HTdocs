@@ -1,0 +1,86 @@
+#!/bin/bash
+
+echo "(gcc -o my-cat my-cat.c -Wall -Werror)"
+gcc -o my-cat my-cat.c -Wall -Werror
+echo "(gcc -o my-grep my-grep.c -Wall -Werror)"
+gcc -o my-grep my-grep.c -Wall -Werror
+echo "(gcc -o my-zip my-zip.c -Wall -Werror)"
+gcc -o my-zip my-zip.c -Wall -Werror
+echo "(gcc -o my-unzip my-unzip.c -Wall -Werror)"
+gcc -o my-unzip my-unzip.c -Wall -Werror
+echo "_______________________________________________________________________"
+echo "TESTING MY-CAT"
+echo ""
+echo "TEST 1: ./my-cat"
+./my-cat
+echo ""
+echo "TEST 2: ./my-cat oneline.txt"
+./my-cat oneline.txt
+echo ""
+echo "TEST 3: ./my-cat oneline.txt twolines.txt"
+./my-cat oneline.txt twolines.txt
+echo ""
+echo "TEST 4: ./my-cat thisIsNotFile.txt"
+./my-cat thisIsNotFile.txt
+echo "_______________________________________________________________________"
+echo "TESTING MY-GREP"
+echo ""
+echo "TEST 1: ./my-grep"
+./my-grep
+echo ""
+echo "TEST 2: ./my-grep foo"
+./my-grep foo
+echo ""
+echo "TEST 3: ./my-grep '' "
+./my-grep ""
+echo ""
+echo "TEST 4: ./my-grep first twolines.txt"
+./my-grep first twolines.txt
+echo ""
+echo "TEST 5: ./my-grep '' twolines.txt"
+./my-grep "" twolines.txt
+echo ""
+echo "TEST 6: ./my-grep First twolines.txt"
+./my-grep First twolines.txt
+echo ""
+echo "TEST 7: ./my-grep first oneline.txt twolines.txt"
+./my-grep first oneline.txt twolines.txt
+echo ""
+echo "TEST 8: ./my-grep '' oneline.txt twolines.txt"
+./my-grep '' oneline.txt twolines.txt
+echo ""
+echo "TEST 9: ./my-grep foo thisIsNotFile.txt"
+./my-grep foo thisIsNotFile.txt
+echo "_______________________________________________________________________"
+echo "TESTING MY-ZIP"
+echo ""
+echo "TEST 1: ./my-zip"
+./my-zip
+echo ""
+echo "TEST 2: ./my-zip oneline.txt"
+./my-zip oneline.txt
+echo ""
+echo "TEST 3: ./my-zip oneline.txt > file.z"
+./my-zip oneline.txt > file.z
+echo ""
+echo "TEST 4: ./my-zip oneline.txt twolines.txt > file2.z"
+./my-zip oneline.txt twolines.txt > file2.z
+echo ""
+echo "TEST 5: ./my-zip thisIsNotFile.txt"
+./my-zip thisIsNotFile.txt
+echo "_______________________________________________________________________"
+echo "TESTING MY-UNZIP, USING FILES ZIPPED IN LAST PART"
+echo ""
+echo "TEST 1: ./my-unzip"
+./my-unzip
+echo ""
+echo "TEST 2: ./my-unzip file.z"
+./my-unzip file.z
+echo ""
+echo "TEST 3: ./my-unzip file.z file2.z"
+./my-unzip file.z file2.z
+echo ""
+echo "TEST 4: ./my-unzip thisIsNotFile.z"
+./my-unzip thisIsNotFile.z
+echo ""
+echo "TESTING DONE"
