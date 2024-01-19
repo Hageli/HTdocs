@@ -11,76 +11,76 @@ gcc -o my-unzip my-unzip.c -Wall -Werror
 echo "_______________________________________________________________________"
 echo "TESTING MY-CAT"
 echo ""
-echo "TEST 1: ./my-cat"
+echo "TEST 1 NO INPUT FILE (./my-cat)"
 ./my-cat
 echo ""
-echo "TEST 2: ./my-cat oneline.txt"
+echo "TEST 2 CORRECT INPUT FILE (./my-cat oneline.txt)"
 ./my-cat oneline.txt
 echo ""
-echo "TEST 3: ./my-cat oneline.txt twolines.txt"
+echo "TEST 3 MULTIPLE INPUT FILES (./my-cat oneline.txt twolines.txt)"
 ./my-cat oneline.txt twolines.txt
 echo ""
-echo "TEST 4: ./my-cat thisIsNotFile.txt"
+echo "TEST 4 INPUT FILE NOT FOUND (./my-cat thisIsNotFile.txt)"
 ./my-cat thisIsNotFile.txt
 echo "_______________________________________________________________________"
 echo "TESTING MY-GREP"
 echo ""
-echo "TEST 1: ./my-grep"
+echo "TEST 1 NO SEARCH STRING (./my-grep)"
 ./my-grep
 echo ""
-echo "TEST 2: ./my-grep foo"
+echo "TEST 2 NO INPUT FILE (./my-grep foo)"
 ./my-grep foo
 echo ""
-echo "TEST 3: ./my-grep '' "
+echo "TEST 3 MATCH ALL STDIN (./my-grep '')"
 ./my-grep ""
 echo ""
-echo "TEST 4: ./my-grep first twolines.txt"
+echo "TEST 4 NORMAL USE WITH SINGLE FILE (./my-grep first twolines.txt)"
 ./my-grep first twolines.txt
 echo ""
-echo "TEST 5: ./my-grep '' twolines.txt"
+echo "TEST 5 MATCH ALL IN FILE (./my-grep '' twolines.txt)"
 ./my-grep "" twolines.txt
 echo ""
-echo "TEST 6: ./my-grep First twolines.txt"
+echo "TEST 6 CASE SENSITIVE NORMAL USE (./my-grep First twolines.txt)"
 ./my-grep First twolines.txt
 echo ""
-echo "TEST 7: ./my-grep first oneline.txt twolines.txt"
+echo "TEST 7 MULTIPLE FILES NORMAL USE (./my-grep first oneline.txt twolines.txt)"
 ./my-grep first oneline.txt twolines.txt
 echo ""
-echo "TEST 8: ./my-grep '' oneline.txt twolines.txt"
+echo "TEST 8 MATCH ALL IN MULTIPLE FILES (./my-grep '' oneline.txt twolines.txt)"
 ./my-grep '' oneline.txt twolines.txt
 echo ""
-echo "TEST 9: ./my-grep foo thisIsNotFile.txt"
+echo "TEST 9 INPUT FILE NOT FOUND (./my-grep foo thisIsNotFile.txt)"
 ./my-grep foo thisIsNotFile.txt
 echo "_______________________________________________________________________"
 echo "TESTING MY-ZIP"
 echo ""
-echo "TEST 1: ./my-zip"
+echo "TEST 1 NO INPUT FILE (./my-zip)"
 ./my-zip
 echo ""
-echo "TEST 2: ./my-zip oneline.txt"
+echo "TEST 2 NORMAL USE NO REDIRECTION (./my-zip oneline.txt)"
 ./my-zip oneline.txt
 echo ""
-echo "TEST 3: ./my-zip oneline.txt > file.z"
+echo "TEST 3 NORMAL USE REDIRECT TO FILE (./my-zip oneline.txt > file.z)"
 ./my-zip oneline.txt > file.z
 echo ""
-echo "TEST 4: ./my-zip oneline.txt twolines.txt > file2.z"
+echo "TEST 4 MULTIPLE FILE NORMAL USE WITH REDIRECT (./my-zip oneline.txt twolines.txt > file2.z)"
 ./my-zip oneline.txt twolines.txt > file2.z
 echo ""
-echo "TEST 5: ./my-zip thisIsNotFile.txt"
+echo "TEST 5 INPUT FILE NOT FOUND (./my-zip thisIsNotFile.txt)"
 ./my-zip thisIsNotFile.txt
 echo "_______________________________________________________________________"
 echo "TESTING MY-UNZIP, USING FILES ZIPPED IN LAST PART"
 echo ""
-echo "TEST 1: ./my-unzip"
+echo "TEST 1 NO INPUT FILE (./my-unzip)"
 ./my-unzip
 echo ""
-echo "TEST 2: ./my-unzip file.z"
+echo "TEST 2 NORMAL USE SINGLE FILE (./my-unzip file.z)"
 ./my-unzip file.z
 echo ""
-echo "TEST 3: ./my-unzip file.z file2.z"
+echo "TEST 3 NORMAL USE MULTIPLE FILE (./my-unzip file.z file2.z)"
 ./my-unzip file.z file2.z
 echo ""
-echo "TEST 4: ./my-unzip thisIsNotFile.z"
+echo "TEST 4 INPUT FILE NOT FOUND (./my-unzip thisIsNotFile.z)"
 ./my-unzip thisIsNotFile.z
 echo ""
 echo "TESTING DONE"

@@ -10,6 +10,7 @@ VIIMEKSI MUOKATTU: 18.1.2024
 // Declaring the functions in this file
 void readContent(char *input_file);
 
+// Reads content of input file
 void readContent(char *input_file) {
     FILE *file = fopen(input_file, "r");
     char buffer[255];
